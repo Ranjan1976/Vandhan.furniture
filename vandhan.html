@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vandhan Furniture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #ffffff;
+      --bg-dark: #1e1e1e;
+      --text-light: #f0f0f0;
+      --text-dark: #121212;
+      --accent: #8B4513;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--accent);
+      color: white;
+    }
+
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: #f7f3ef;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .section {
+      padding: 2rem;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product {
+      background: #f1f1f1;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #333;
+      color: white;
+    }
+
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    .dark-mode header {
+      background-color: #111;
+    }
+
+    .toggle-btn {
+      cursor: pointer;
+      background: none;
+      border: 1px solid white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      color: white;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    form input, form textarea {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vandhan</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#contact">Contact</a>
+      <button class="toggle-btn" onclick="toggleMode()">Toggle Mode</button>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Elegant Furniture for Every Home</h1>
+    <p>Crafted with care. Designed for comfort.</p>
+  </section>
+
+  <section class="section">
+    <h2 style="text-align: center;">Featured Products</h2>
+    <div class="products">
+      <div class="product">
+        <h3>Modern Sofa</h3>
+        <p>Comfortable and stylish seating for your living room.</p>
+      </div>
+      <div class="product">
+        <h3>Dining Table</h3>
+        <p>Wooden dining set perfect for family dinners.</p>
+      </div>
+      <div class="product">
+        <h3>Office Chair</h3>
+        <p>Ergonomic design for your workspace needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2 style="text-align: center;">Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vandhan Furniture. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
